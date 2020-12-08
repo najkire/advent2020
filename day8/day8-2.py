@@ -15,16 +15,12 @@ for flip in candidates:
     failed = False
 
     while n + 1 != len(temp_ops):
-        if n in seen:
+        if n in seen or n >= len(temp_ops):
             failed = True
             break
         seen.add(n)
 
-        try:
-            op, val = temp_ops[n].split()
-        except:
-            continue
-
+        op, val = temp_ops[n].split()
         if op == 'nop':
             n += 1
         elif op == 'acc':
