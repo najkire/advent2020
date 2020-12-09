@@ -14,8 +14,8 @@ for flip in candidates:
     n = 0
     failed = False
 
-    while n + 1 != len(temp_ops):
-        if n in seen or n >= len(temp_ops):
+    while n != len(temp_ops):
+        if n in seen or n > len(temp_ops):
             failed = True
             break
         seen.add(n)
