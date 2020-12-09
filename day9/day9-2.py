@@ -5,6 +5,7 @@ with open('input.txt', 'r') as input_file:
 
 for l in range(2, len(numbers)):
     for n in range(len(numbers) - l):
-        if sum(numbers[n:n + l]) == TARGET:
-            print(min(numbers[n:n + l]) + max(numbers[n:n + l]))
+        crange = numbers[n:n + l]
+        if sum(crange) == TARGET:
+            print(min(crange) + max(crange))
             exit()
