@@ -15,7 +15,7 @@ def product(items):
     return product
 
 
-with open('input2.txt', 'r') as input_file:
+with open('input.txt', 'r') as input_file:
     numbers = [int(line.strip()) for line in input_file.readlines()]
 
 chain = sorted(numbers)
