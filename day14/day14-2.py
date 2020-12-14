@@ -5,9 +5,9 @@ with open('input.txt', 'r') as input_file:
     program = [line.strip() for line in input_file.readlines()]
 
 def apply_mask(mask, value):
-    bin_value = format(int(value), 'b').rjust(36, '0')
+    rbin_value = format(int(value), 'b').rjust(36, '0')[::-1]
     rmask = mask[::-1]
-    output = ''.join([rmask[n] if rmask[n] in 'X1' else v for n, v in enumerate(bin_value[::-1])])[::-1]
+    output = ''.join([rmask[n] if rmask[n] in 'X1' else v for n, v in enumerate(rbin_value)])[::-1]
     return output
 
 
